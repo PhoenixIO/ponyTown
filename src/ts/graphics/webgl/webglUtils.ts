@@ -26,7 +26,7 @@ export function getWebGLContext(canvas: HTMLCanvasElement): WebGLRenderingContex
 		throw new Error(WEBGL_CREATION_ERROR);
 	}
 
-	return gl;
+	return gl as WebGL2RenderingContext;
 }
 
 export function isWebGL2(gl: WebGLRenderingContext | undefined) {

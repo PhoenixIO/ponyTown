@@ -2,7 +2,7 @@ import { uniq } from 'lodash';
 import { Types } from 'mongoose';
 import { Profile } from '../common/interfaces';
 import { arraysEqual } from '../common/utils';
-import { IAccount, IAuth, Auth, findAuthByOpenId, updateAuth, UpdateAuth, Account } from './db';
+import { IAccount, IAuth, Auth, findAuthByOpenId, updateAuth, UpdateAuth, Account, MongoUpdate } from './db';
 import { system } from './logger';
 import { UserError } from './userError';
 import { CreateAccountOptions, connectOnlySocialError } from './accountUtils';
@@ -70,7 +70,7 @@ export async function updateAuthInfo(
 
 	if (Object.keys(changes).length > 0) {
 		Object.assign(auth, changes);
-		await updateAuth(auth._id, changes);
+		await updateAuth(auth._id, changes as MongoUpdate<IAuth>);
 	}
 }
 
@@ -102,5 +102,5 @@ async function verifyOrRestoreAuth(auth: IAuth, mergeAccount: string | undefined
 	}
 
 	Object.assign(auth, changes);
-	await updateAuth(auth._id, changes);
+	await updateAuth(auth._id, changes as MongoUpdate<IAuth>);
 }
