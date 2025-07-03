@@ -47,7 +47,9 @@
     "update-fontawesome": "npm update @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/angular-fontawesome --save"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "0.1002.4",
     "@angular/cli": "10.2.4",
+    "@ngtools/webpack": "10.2.4",
     "@types/minimatch": "3.0.5",
     "typescript": "3.9.10"
   },
@@ -64,11 +66,10 @@
     "@angular/platform-server": "10.2.4",
     "@angular/router": "10.2.4",
     "@clusterws/cws": "0.15.0",
-    "@fortawesome/angular-fontawesome": "0.5.0",
+    "@fortawesome/angular-fontawesome": "0.10.0",
     "@fortawesome/fontawesome-svg-core": "1.2.22",
     "@fortawesome/free-brands-svg-icons": "5.10.2",
     "@fortawesome/free-solid-svg-icons": "5.10.2",
-    "@ngtools/webpack": "8.3.1",
     "@passport-next/passport-facebook": "3.1.2",
     "@passport-next/passport-google-oauth2": "1.0.0",
     "@types/base64-js": "1.2.5",
