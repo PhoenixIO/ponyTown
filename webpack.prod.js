@@ -21,10 +21,10 @@ const compilerOptions = require('./tsconfig-aot.json').compilerOptions;
 const compilerOptionsES = require('./tsconfig-aot-es.json').compilerOptions;
 
 const scripts = [
-	['bootstrap', 'app/app.module#AppModule', 'assets', compilerOptions, 'tsconfig-aot.json', 5, false],
+	['bootstrap', 'app/app.module#AppModule', 'assets', compilerOptions, 'tsconfig-aot.json', 7, false],
 	// ['bootstrap-es', 'app/app.module#AppModule', 'assets', compilerOptionsES, 'tsconfig-aot-es.json', 7, false],
-	['bootstrap-admin', 'admin/admin.module#AdminAppModule', 'assets-admin', compilerOptions, 'tsconfig-aot.json', 5, true],
-	['bootstrap-tools', 'tools/tools.module#ToolsAppModule', 'assets', compilerOptions, 'tsconfig-aot.json', 5, true],
+	['bootstrap-admin', 'admin/admin.module#AdminAppModule', 'assets-admin', compilerOptions, 'tsconfig-aot.json', 7, true],
+	['bootstrap-tools', 'tools/tools.module#ToolsAppModule', 'assets', compilerOptions, 'tsconfig-aot.json', 7, true],
 ];
 
 function getScripts(args) {
